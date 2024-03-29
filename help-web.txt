@@ -1,0 +1,301 @@
+https://github.com/Colt/TheWebDeveloperBootcampSolutions
+
+MDN    https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+       https://developer.mozilla.org/en-US/
+
+HTML spec   https://html.spec.whatwg.org
+
+
+HTML5 root of the page is indicated by DOCTYPE.
+- Must have one head and one body.
+- Title is the title of the tab.
+
+       <!DOCTYPE html>
+       <html>
+       <head>
+              <title>Still learning</title>
+       </head>
+       <body>
+              ...here goes all the content...
+       </body>
+       </html>
+
+
+Typing !<tab> generates basic html boilerplate (done by Emmet):
+
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       </head>
+       <body>
+       
+       </body>
+       </html>
+
+
+Comment:
+    <!-- comment -->
+
+Text markup:
+    <b>bold</b>
+    <i>italic</i>
+    <u>underline</u>
+    <sub>subscript</sub>
+    <sup>superscript</sup>
+
+
+<p>paragraph</p>
+
+
+Horizontal line:
+    <hr>
+
+Line break with <br> or <br />:
+    Mozilla<br />
+    331 E. Evelyn Avenue<br />
+    Mountain View, CA<br />
+    94041<br />
+    USA<br />
+
+
+Headings:
+    <h1>heading1</h1>
+    <h2>heading2</h2>
+    <h3>heading3</h3>
+
+Ordered list:
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+
+Unordered list:
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+Anchor:
+    <a href="https://www.pharo.org">Pharo</a>
+    <a href="about.html">About Pharo</a>
+
+Image:
+    <img src="https://www.pharo.org/web/files/pharo.png">
+    <img src="pharo.png">
+
+Image with alt attribute which holds a textual replacement for the image:
+    <img src="https://www.example.com/image.jpg" alt="Description of the image">
+
+
+Table
+    table header
+    table row
+    table data
+    table head
+    table body
+    table foot
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Married</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>30</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Jane Doe</td>
+            <td>28</td>
+            <td>No</td>
+        </tr>
+    </table>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Married</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Jane Doe</td>
+                <td>28</td>
+                <td>No</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>58</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+
+To span a table header or data over multiple rows or columns: 
+<th rowspan="2">Name</th>
+<th colspan="2">Name</th>
+
+
+In HTML, elements are categorized as either block-level elements or inline elements:
+- Block-level elements form a visible block on a page. They appear on a new line from the content that comes before and after them. Examples of block-level elements include <div>, <h1> - <h6>, <p>, and <form>.
+
+- Inline elements do not start on a new line. They appear on the same line as the content and tags beside them. Examples of inline elements include <span>, <a>, <img>, and <button>.
+
+Content Division element
+The <div> HTML element is the generic container for flow content. 
+It has no effect on the content or layout until styled in some way using CSS. It is a block-level element
+
+    <div class="warning">
+    <img src="/media/examples/leopard.jpg" alt="An intimidating leopard." />
+    <p>Beware of the leopard</p>
+    </div>
+
+The Content Span element
+<span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline-level element.
+The <span> HTML element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element is appropriate. 
+
+    <p>
+    Add the <span class="ingredient">basil</span>, <span class="ingredient">pine nuts</span> and
+    <span class="ingredient">garlic</span> to a blender and blend into a paste.
+    </p>
+
+where the css would be:
+    span.ingredient {
+    color: #f00;
+    }
+
+
+HTML entities:
+    Begin with an ampersand (&) and ends with a semicolon (;). 
+    Used to display reserved or invisible characters
+    https://entitycode.com
+    https://developer.mozilla.org/en-US/docs/Glossary/Entity
+
+    &	&amp;	
+    <	&lt;	
+    >	&gt;	
+    ≠	&ne;	
+    £	&pound;	
+    €	&euro;	
+
+
+Semantic HTML5 elements.
+    Instead of div's use more meaningful divisions like:
+
+        <main>
+        <nav>       navigation
+        <section>
+        <article>
+        <aside>
+        <footer>
+        <header>
+        <time>
+        <figure>
+
+        <details>
+        <figcaption>
+        <mark>
+        <summary>
+
+HTML Forms
+An HTML form is used to collect user input. 
+The <form> element acts as a container for different types of input elements such as text fields, checkboxes, radio buttons, submit buttons, etc.
+  
+    <form action="https://www.pharo.org">
+        <input type="text" placeholder="username">
+        <input type="password" placeholder="password">
+        <input type="number" value="10">
+        <input type="color">
+        <input type="date">
+    </form>
+
+HTML Label Element
+    The <label> element in HTML is used to provide a text description for form elements. 
+    - It's useful for accessibility, as it allows screen readers to read out the label when the user is focused on the form element.
+    - When a user clicks or touches/taps a label, the browser passes the focus to its associated input. That increased hit area for focusing the input provides an advantage to anyone trying to activate it.
+
+    The <label> element is associated with an input element through the for attribute, which should be the same as the id of the input element.
+
+        <label for="peas">Do you like peas?</label>
+        <input type="checkbox" name="peas" id="peas" />
+
+    Alternatively, you can nest the <input> directly inside the <label>, in which case the for and id attributes are not needed because the association is implicit:
+
+        <label>
+            Do you like apples?
+            <input type="checkbox" name="apple" />
+        </label>
+
+
+HTML Button element
+    The <button> HTML element is an interactive element activated by a user with a mouse, keyboard, finger.
+    Once activated, it then performs an action, such as submitting a form or opening a dialog.
+
+    The type defines the default behavior of the button:
+    - submit: The button submits the form data to the server. This is the default if the attribute is not specified for buttons associated with a <form>.
+    
+    - button: The button has no default behavior, and does nothing when pressed by default.
+            
+    <button>Submit 1</button>
+    <button type="submit">Submit 2</button>
+    <button type="button">Do not Submit</button>
+
+    Note: The action in the form specified where to submit to.
+
+
+Form submitting search to Reddit
+    https://www.reddit.com/search?q=<your search>
+    Note the q(uery) parameter
+    
+    <form action="https://www.reddit.com/search">
+        <input type="text" name="q" placeholder="Search Reddit">
+        <button>Search Reddit</button>
+    </form>
+
+
+
+
+Emmet Abbreviations
+    Emmet is a HTML/CSS plugin. 
+    By default present in VS Code
+
+    https://docs.emmet.io/cheat-sheet/
+
+    nav>ul>li yields:
+
+        <nav>
+            <ul>
+                <li></li>
+            </ul>
+        </nav> 
+
+    ul>li*3 yields:
+
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    h1+h1+h1 yields:
+
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
